@@ -1,0 +1,25 @@
+<!-- todo-list.component.html -->
+<div class="container border rounded">
+  <div class="title-container d-flex align-items-center justify-content-center">
+    <h1>Lista de Tareas</h1>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{ todo.title }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="deleteTodo(todo.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<hr>
